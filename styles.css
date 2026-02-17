@@ -366,6 +366,17 @@ a {
     color: var(--color-off-white);
 }
 
+.btn-nav {
+    background: var(--color-off-white);
+    color: var(--color-off-black);
+    border-radius: var(--border-radius-full);
+    padding: 6px 11px;
+}
+
+.btn-nav:hover {
+    background: #e0e0e0;
+}
+
 /* ========================================
    DNA Section (Company Logos)
    ======================================== */
@@ -373,14 +384,14 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
-    padding: 32px 0;
-    background: var(--color-off-black);
+    gap: 28px;
+    padding: 60px 0;
+    background: var(--color-off-white);
     overflow: hidden;
 }
 
 .dna-section .section-label {
-    color: var(--color-off-black-quaternary);
+    color: var(--color-off-black-tertiary);
 }
 
 .section-label {
@@ -422,13 +433,12 @@ a {
 /* Fixed dimensions - no responsive scaling for logos */
 .logo-item img {
     object-fit: contain;
-    /* Logos already have muted gray color (#9B9B9B) */
-    opacity: 0.85;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
 .logo-item:hover img {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 /* Individual logo fixed dimensions from Figma (scaled to 80%) */
@@ -476,28 +486,28 @@ a {
    About Section (Features Grid)
    ======================================== */
 .about-section {
-    padding: 48px;
+    padding: 80px 60px;
     background: var(--color-off-black);
 }
 
 .about-section .section-label {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 64px 72px;
-    max-width: 1114px;
+    gap: 80px 60px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .feature-card {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: 323px;
+    gap: 20px;
+    max-width: 400px;
 }
 
 .feature-image {
@@ -517,7 +527,7 @@ a {
 .feature-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
 .feature-header {
@@ -538,8 +548,8 @@ a {
     font-family: var(--font-helvetica);
     font-weight: 700;
     font-size: 26px;
-    line-height: 1;
-    letter-spacing: -0.6px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
     color: var(--color-off-white);
 }
 
@@ -575,7 +585,7 @@ a {
    ======================================== */
 .quote-section {
     position: relative;
-    padding: 14px 48px;
+    padding: 40px 60px;
     background: var(--color-off-black);
 }
 
@@ -602,6 +612,7 @@ a {
         rgba(0, 0, 0, 0) 36.065%,
         rgba(34, 34, 34, 0.95) 94.946%
     );
+    z-index: 1;
 }
 
 .quote-content {
@@ -614,6 +625,7 @@ a {
     gap: 43px;
     align-items: flex-end;
     max-width: 347px;
+    z-index: 2;
 }
 
 .quote-negatives {
@@ -671,7 +683,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 48px;
+    padding: 40px 60px;
     margin-bottom: 0;
 }
 
@@ -799,7 +811,7 @@ a {
     }
     
     .dna-section {
-        padding: 24px 0;
+        padding: 40px 0;
     }
     
     .logo-strip {
@@ -807,7 +819,7 @@ a {
     }
     
     .about-section {
-        padding: 32px;
+        padding: 60px 32px;
     }
     
     .quote-content {
@@ -820,7 +832,7 @@ a {
     }
     
     .footer-top {
-        padding: 0 32px;
+        padding: 30px 32px;
     }
 }
 
@@ -919,7 +931,7 @@ a {
     }
     
     .quote-section {
-        padding: 8px 16px;
+        padding: 20px 16px;
     }
     
     .quote-bg img {
@@ -947,7 +959,7 @@ a {
     .footer-top {
         flex-direction: column;
         gap: 16px;
-        padding: 16px;
+        padding: 20px 16px;
         text-align: center;
     }
     
@@ -1002,11 +1014,11 @@ a {
     }
     
     .dna-section {
-        padding: 16px 0;
+        padding: 30px 0;
     }
     
     .about-section {
-        padding: 24px 16px;
+        padding: 40px 16px;
     }
     
     .about-section .section-label {
