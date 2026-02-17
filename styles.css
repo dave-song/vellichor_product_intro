@@ -197,6 +197,12 @@ a {
     background: var(--color-primary-light);
 }
 
+/* Navbar button - pill style with rounded corners */
+.btn-nav-primary {
+    padding: 8px 14px;
+    border-radius: var(--border-radius-md);
+}
+
 .btn-glow {
     padding: 13px 16px;
     border-radius: var(--border-radius-full);
@@ -250,17 +256,18 @@ a {
    ======================================== */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 96px 48px 48px;
+    padding: 48px;
+    margin-top: 80px;
     overflow: hidden;
 }
 
 .hero-bg {
     position: absolute;
-    inset: 17px;
+    inset: 0 17px 17px 17px;
     border-radius: var(--border-radius-md);
     background-image: url('assets/hero-bg.png');
     background-size: cover;
@@ -377,6 +384,28 @@ a {
     background: #e0e0e0;
 }
 
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator svg {
+    width: 32px;
+    height: 32px;
+}
+
 /* ========================================
    DNA Section (Company Logos)
    ======================================== */
@@ -385,13 +414,13 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 28px;
-    padding: 60px 0;
-    background: var(--color-off-white);
+    padding: 120px 0;
+    background: #222222;
     overflow: hidden;
 }
 
 .dna-section .section-label {
-    color: var(--color-off-black-tertiary);
+    color: var(--color-off-black-quaternary);
 }
 
 .section-label {
@@ -486,7 +515,7 @@ a {
    About Section (Features Grid)
    ======================================== */
 .about-section {
-    padding: 80px 60px;
+    padding: 160px 60px;
     background: var(--color-off-black);
 }
 
@@ -585,7 +614,7 @@ a {
    ======================================== */
 .quote-section {
     position: relative;
-    padding: 40px 60px;
+    padding: 80px 60px;
     background: var(--color-off-black);
 }
 
@@ -683,7 +712,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 60px;
+    padding: 80px 60px;
     margin-bottom: 0;
 }
 
@@ -794,7 +823,8 @@ a {
 /* Tablets */
 @media (max-width: 992px) {
     .hero {
-        padding: 80px 32px 32px;
+        padding: 32px;
+        margin-top: 70px;
     }
     
     .hero-title {
@@ -811,7 +841,7 @@ a {
     }
     
     .dna-section {
-        padding: 40px 0;
+        padding: 80px 0;
     }
     
     .logo-strip {
@@ -819,7 +849,7 @@ a {
     }
     
     .about-section {
-        padding: 60px 32px;
+        padding: 120px 32px;
     }
     
     .quote-content {
@@ -887,12 +917,13 @@ a {
     }
     
     .hero {
-        padding: 100px 20px 40px;
+        padding: 40px 20px;
         min-height: auto;
+        margin-top: 60px;
     }
     
     .hero-bg {
-        inset: 10px;
+        inset: 0 10px 10px 10px;
     }
     
     .hero-title {
@@ -931,7 +962,7 @@ a {
     }
     
     .quote-section {
-        padding: 20px 16px;
+        padding: 40px 16px;
     }
     
     .quote-bg img {
@@ -980,6 +1011,10 @@ a {
 
 /* Mobile phones */
 @media (max-width: 480px) {
+    .hero {
+        margin-top: 50px;
+    }
+    
     .hero-title {
         font-size: 26px;
     }
@@ -1014,11 +1049,11 @@ a {
     }
     
     .dna-section {
-        padding: 30px 0;
+        padding: 60px 0;
     }
     
     .about-section {
-        padding: 40px 16px;
+        padding: 80px 16px;
     }
     
     .about-section .section-label {
