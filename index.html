@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -21,23 +21,12 @@
           <span class="logo-text">Vellichor</span>
         </a>
         <div class="nav-actions">
-          <a href="#" class="sign-in">
-            Sign In
-            <svg
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.5 15L12.5 10L7.5 5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+          <a href="#" class="btn-primary btn-nav-primary js-waitlist-open">
+            Join the waitlist
+            <svg class="btn-nav-primary-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="#" class="btn-primary btn-nav-primary">Join the waitlist</a>
         </div>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -50,6 +39,57 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-bg">
+        <div class="hero-neural-overlay" aria-hidden="true">
+          <svg class="hero-neural-svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <filter id="synapseGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Connections (synapses) - lines between nodes -->
+            <line class="synapse-line delay-0" x1="50" y1="60" x2="120" y2="100" />
+            <line class="synapse-line delay-3" x1="120" y1="100" x2="200" y2="80" />
+            <line class="synapse-line delay-6" x1="200" y1="80" x2="280" y2="110" />
+            <line class="synapse-line delay-9" x1="280" y1="110" x2="350" y2="70" />
+            <line class="synapse-line delay-2" x1="50" y1="60" x2="80" y2="150" />
+            <line class="synapse-line delay-5" x1="120" y1="100" x2="150" y2="180" />
+            <line class="synapse-line delay-8" x1="200" y1="80" x2="220" y2="170" />
+            <line class="synapse-line delay-11" x1="280" y1="110" x2="300" y2="190" />
+            <line class="synapse-line delay-1" x1="80" y1="150" x2="150" y2="180" />
+            <line class="synapse-line delay-4" x1="150" y1="180" x2="220" y2="170" />
+            <line class="synapse-line delay-7" x1="220" y1="170" x2="300" y2="190" />
+            <line class="synapse-line delay-10" x1="100" y1="220" x2="180" y2="240" />
+            <line class="synapse-line delay-2" x1="180" y1="240" x2="260" y2="220" />
+            <line class="synapse-line delay-5" x1="80" y1="150" x2="100" y2="220" />
+            <line class="synapse-line delay-8" x1="150" y1="180" x2="180" y2="240" />
+            <line class="synapse-line delay-11" x1="220" y1="170" x2="260" y2="220" />
+            <line class="synapse-line delay-0" x1="30" y1="120" x2="50" y2="60" />
+            <line class="synapse-line delay-4" x1="370" y1="130" x2="350" y2="70" />
+            <line class="synapse-line delay-7" x1="200" y1="80" x2="180" y2="40" />
+            <line class="synapse-line delay-10" x1="180" y1="40" x2="250" y2="50" />
+            <!-- Nodes (neurons) -->
+            <circle class="synapse-node delay-0" cx="50" cy="60" r="3" />
+            <circle class="synapse-node delay-1" cx="120" cy="100" r="3.5" />
+            <circle class="synapse-node delay-2" cx="200" cy="80" r="3" />
+            <circle class="synapse-node delay-3" cx="280" cy="110" r="3.5" />
+            <circle class="synapse-node delay-4" cx="350" cy="70" r="3" />
+            <circle class="synapse-node delay-5" cx="80" cy="150" r="3" />
+            <circle class="synapse-node delay-6" cx="150" cy="180" r="3.5" />
+            <circle class="synapse-node delay-7" cx="220" cy="170" r="3" />
+            <circle class="synapse-node delay-8" cx="300" cy="190" r="3.5" />
+            <circle class="synapse-node delay-9" cx="100" cy="220" r="3" />
+            <circle class="synapse-node delay-10" cx="180" cy="240" r="3.5" />
+            <circle class="synapse-node delay-11" cx="260" cy="220" r="3" />
+            <circle class="synapse-node delay-0" cx="30" cy="120" r="2.5" />
+            <circle class="synapse-node delay-3" cx="370" cy="130" r="2.5" />
+            <circle class="synapse-node delay-6" cx="180" cy="40" r="3" />
+            <circle class="synapse-node delay-9" cx="250" cy="50" r="3" />
+          </svg>
+        </div>
         <div class="hero-dots"></div>
       </div>
       <div class="hero-content">
@@ -64,7 +104,7 @@
           <span>A Swartz Center Startup</span>
         </div>
         <div class="hero-text">
-          <p class="hero-subtitle">we are your company's</p>
+          <p class="hero-subtitle">We are your company's</p>
           <h1 class="hero-title">Intelligence Engine</h1>
         </div>
         <div class="hero-description">
@@ -76,7 +116,12 @@
             preserving critical knowledge before it walks out the door.
           </p>
         </div>
-        <a href="#" class="btn-primary btn-glow">Join the waitlist</a>
+        <a href="#" class="btn-primary btn-nav-primary js-waitlist-open hero-cta">
+            Join the waitlist
+            <svg class="btn-nav-primary-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
       </div>
       <!-- Scroll Indicator -->
       <a href="#dna" class="scroll-indicator">
@@ -84,19 +129,17 @@
       </a>
     </section>
 
-    <!-- DNA Section (Company Logos) -->
+    <!-- DNA Section (Company Logos) - marquee right to left -->
     <section id="dna" class="dna-section">
       <p class="section-label">Our DNA</p>
       <div class="logo-marquee">
+        <div class="logo-marquee-track">
         <div class="logo-strip">
           <div class="logo-item logo-deloitte">
             <img src="assets/deloitte_logo.svg" alt="Deloitte" />
           </div>
           <div class="logo-item logo-brown">
             <img src="assets/brown_logo.svg" alt="Brown University" />
-          </div>
-          <div class="logo-item logo-google">
-            <img src="assets/google_logo.svg" alt="Google" />
           </div>
           <div class="logo-item logo-hcii">
             <img src="assets/hcii_logo.svg" alt="HCII" />
@@ -121,9 +164,6 @@
           <div class="logo-item logo-brown">
             <img src="assets/brown_logo.svg" alt="Brown University" />
           </div>
-          <div class="logo-item logo-google">
-            <img src="assets/google_logo.svg" alt="Google" />
-          </div>
           <div class="logo-item logo-hcii">
             <img src="assets/hcii_logo.svg" alt="HCII" />
           </div>
@@ -140,12 +180,13 @@
             <img src="assets/ericsson_logo.svg" alt="Ericsson" />
           </div>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- About Section (Features Grid) -->
     <section class="about-section">
-      <p class="section-label">About Vellichor</p>
+      <p class="section-label">About Vellichor AI</p>
       <div class="features-grid">
         <!-- Card 1: Capture -->
         <div class="feature-card">
@@ -261,7 +302,7 @@
               </h3>
             </div>
             <div class="cta-actions">
-              <a href="#" class="btn-primary btn-full">Join the waitlist</a>
+              <a href="#" class="btn-primary btn-full js-waitlist-open">Join the waitlist</a>
               <span class="cta-subtext">Book expert intuition</span>
             </div>
           </div>
@@ -363,6 +404,34 @@
       </div>
     </footer>
 
+    <!-- Waitlist Modal -->
+    <div class="waitlist-overlay js-waitlist-overlay" id="waitlist-overlay" aria-hidden="true">
+      <div class="waitlist-modal" role="dialog" aria-labelledby="waitlist-title" aria-modal="true">
+        <button type="button" class="waitlist-close js-waitlist-close" aria-label="Close">×</button>
+        <h2 id="waitlist-title" class="waitlist-title">Join the waitlist</h2>
+        <p class="waitlist-desc">We'll notify you when we launch.</p>
+        <form class="waitlist-form js-waitlist-form" action="api/waitlist.php" method="post">
+          <div class="form-group">
+            <label for="waitlist-name">Name</label>
+            <input type="text" id="waitlist-name" name="name" class="form-input" placeholder="Your name" autocomplete="name" maxlength="120" />
+          </div>
+          <div class="form-group">
+            <label for="waitlist-email">Email <span class="required">*</span></label>
+            <input type="email" id="waitlist-email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email" maxlength="255" />
+            <span class="form-error js-email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="waitlist-phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="waitlist-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" autocomplete="tel" maxlength="30" />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary btn-full waitlist-submit">Submit</button>
+          </div>
+          <p class="form-message js-form-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
     <!-- Scroll to Top Button -->
     <button class="scroll-top" aria-label="Scroll to top">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -412,6 +481,79 @@
           behavior: "smooth",
         });
       });
+
+      // Waitlist modal
+      (function () {
+        const overlay = document.getElementById("waitlist-overlay");
+        const form = document.querySelector(".js-waitlist-form");
+        const messageEl = document.querySelector(".js-form-message");
+        const emailError = document.querySelector(".js-email-error");
+
+        document.querySelectorAll(".js-waitlist-open").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            overlay.classList.add("is-open");
+            overlay.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            document.getElementById("waitlist-email").focus();
+          });
+        });
+
+        function closeModal() {
+          overlay.classList.remove("is-open");
+          overlay.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        document.querySelector(".js-waitlist-close").addEventListener("click", closeModal);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal(); });
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const submitBtn = form.querySelector(".waitlist-submit");
+          messageEl.textContent = "";
+          messageEl.className = "form-message js-form-message";
+          emailError.textContent = "";
+
+          const name = (form.querySelector('[name="name"]').value || "").trim();
+          const email = (form.querySelector('[name="email"]').value || "").trim();
+          const phone = (form.querySelector('[name="phone"]').value || "").trim();
+
+          if (!email) {
+            emailError.textContent = "Email is required.";
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Submitting…";
+
+          try {
+            const res = await fetch("api/waitlist.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams({ name, email, phone }),
+            });
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok && data.success) {
+              messageEl.textContent = data.message || "You're on the list! We'll be in touch.";
+              messageEl.classList.add("success");
+              form.reset();
+              setTimeout(closeModal, 2000);
+            } else {
+              messageEl.textContent = data.message || "Something went wrong. Please try again.";
+              messageEl.classList.add("error");
+            }
+          } catch (err) {
+            messageEl.textContent = "Network error. Please try again.";
+            messageEl.classList.add("error");
+          }
+
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+        });
+      })();
     </script>
   </body>
 </html>
